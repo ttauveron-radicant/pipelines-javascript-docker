@@ -3,7 +3,7 @@ trigger:
 
 variables:
   dockerRegistryServiceConnection: 'test'
-  imageRepository: 'test'
+  imageRepository: 'rad-sbx-c106/test'
   dockerfilePath: '$(Build.SourcesDirectory)/app/Dockerfile'
   tag: '$(Build.BuildId)'
 
@@ -19,7 +19,7 @@ stages:
         dockerVersion: '17.09.0-ce'
 
     - task: Docker@2
-      displayName: Build and publish image to Azure Container Registry
+      displayName: Build and publish image to Artifact Registry
       inputs:
         command: buildAndPush
         containerRegistry: $(dockerRegistryServiceConnection)
