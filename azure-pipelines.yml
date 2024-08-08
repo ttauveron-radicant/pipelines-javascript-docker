@@ -3,7 +3,7 @@ trigger:
 
 variables:
   dockerRegistryServiceConnection: 'test'
-  imageRepository: 'rad-sbx-c106/test'
+  imageRepository: 'rad-sbx-c106/test/myapp'
   dockerfilePath: '$(Build.SourcesDirectory)/app/Dockerfile'
   tag: '$(Build.BuildId)'
 
